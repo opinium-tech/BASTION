@@ -1,0 +1,21 @@
+{
+  "name": "computer-swarm-operator",
+  "version": "2.0.0",
+  "private": true,
+  "bin": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "npx @yao-pkg/pkg@6.23.0 server.js --targets node22-win-x64 --output ../dist/Operator.exe"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "pkg": {
+    "assets": [
+      "public/**/*",
+      "shared/**/*"
+    ]
+  }
+}

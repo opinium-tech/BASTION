@@ -1,2 +1,5 @@
-# BASTION
-BASTION is a centralized PC management system that connects multiple computers over a network. It monitors system status, running processes, and installed applications through one dashboard. Users can remotely execute commands on individual or multiple PCs, enabling efficient, scalable, and coordinated computer administration.
+# Computer Swarm Desktop
+
+A single portable Windows desktop application containing both Operator and Agent roles. The app uses an Electron native window; the Operator dashboard is rendered inside the app rather than opened in Chrome.
+
+See [START-HERE.md](START-HERE.md) for build and network setup.

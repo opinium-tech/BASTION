@@ -1,0 +1,19 @@
+{
+  "name": "computer-swarm-agent",
+  "version": "2.0.0",
+  "private": true,
+  "bin": "agent.js",
+  "scripts": {
+    "start": "node agent.js",
+    "build": "npx @yao-pkg/pkg@6.23.0 agent.js --targets node22-win-x64 --output ../dist/Agent.exe"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0"
+  },
+  "pkg": {
+    "assets": [
+      "shared/**/*"
+    ]
+  }
+}

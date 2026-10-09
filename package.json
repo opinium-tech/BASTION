@@ -1,0 +1,38 @@
+{
+  "name": "computer-swarm-desktop",
+  "version": "3.0.0",
+  "private": true,
+  "description": "Computer Swarm desktop application with Operator and Agent roles",
+  "main": "desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win portable --x64"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "electron": "^37.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "in.dmpsaiclub.computerswarm",
+    "productName": "Computer Swarm",
+    "asar": true,
+    "files": [
+      "desktop/**/*",
+      "operator/**/*",
+      "agent/**/*",
+      "shared/**/*",
+      "package.json",
+      "node_modules/**/*",
+      "!**/.env",
+      "!**/node_modules/.cache/**"
+    ],
+    "directories": { "output": "dist" },
+    "win": { "target": [{ "target": "portable", "arch": ["x64"] }] },
+    "portable": { "artifactName": "Computer-Swarm-Setup-Free.exe" }
+  }
+}
